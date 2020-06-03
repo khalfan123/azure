@@ -4,19 +4,17 @@ If you want to learn more about Jump-box then check out the following [link](htt
 
 > **Note:** If you need more **Packages** in jumbox kindly create an issue [here](https://github.com/khalfan123/jumpbox/issues).
 
-# Pre-Installed utilities
- - sudo 
- - apt-utils 
- - curl 
- - jq 
- - wget 
- - git 
- - zip 
- - unzip 
- - ca-certificates 
- - apt-transport-https 
- - lsb-release gnupg  
- - software-properties-common 
+### Tech
+
+The following Packages are available in Jump-Box:
+
+* [Azure Cli] - Set of commands used to create and manage Azure resources.
+* [Helm] - Helm helps you manage Kubernetes applications.
+* [Azure Powershell] - Managing Azure resources directly from the PowerShell command line.
+* [Kubectl] - Command line tool for controlling Kubernetes clusters.
+* [Docker] - Package Software into Standardized Units for Development, Shipment and Deployment.
+* [Docker-compose] - Compose is a tool for defining and running multi-container Docker applications.
+
 
 ### Installation
 
@@ -30,20 +28,14 @@ docker pull docdoc2018/jumpbox
 docker run --rm -it --name jbox docdoc2018/jumpbox:latest
 ```
 
-### Tech
 
-Jum-Box have Pre-Installed Packages to work properly:
-
-* [Azure Cli] - Set of commands used to create and manage Azure resources.
-* [Helm] - Helm helps you manage Kubernetes applications.
-* [Azure Powershell] - Managing Azure resources directly from the PowerShell command line.
-* [Kubectl] - Command line tool for controlling Kubernetes clusters.
-* [Docker] - Package Software into Standardized Units for Development, Shipment and Deployment.
-* [Docker-compose] - Compose is a tool for defining and running multi-container Docker applications.
-
-
-
-
+# Pre-Installed utilities
+ - curl 
+ - jq 
+ - wget 
+ - git 
+ - zip 
+ - unzip 
 
 
 
