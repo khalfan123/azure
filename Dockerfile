@@ -23,13 +23,15 @@ RUN apt-get update && apt-get install -y \
     lsb-release gnupg  \
     software-properties-common
 
-
-# Installing Helm 2.14.0
-RUN mkdir -p ~/Downloads && curl -L https://raw.githubusercontent.com/khalfan123/jumpbox/master/helm_scripts/get-helm-2.sh | \
-    bash -s -- --version $helm2_version --no-sudo
-# Installing Helm 3.2.1
-RUN mkdir -p ~/Downloads && curl -L https://raw.githubusercontent.com/khalfan123/jumpbox/master/helm_scripts/get-helm-3.sh | \
-    bash -s -- --version $helm3_version --no-sudo
+# install helm 2.*
+RUN curl https://get.helm.sh/helm-$helm2_version-linux-amd64.tar.gz > ./helm.tar.gz    && \
+    tar -xvf ./helm.tar.gz                                                      && \ 
+    mv ./linux-amd64/helm /usr/local/bin/helm2                                  && \
+    mv ./linux-amd64/tiller /usr/local/bin 
+# install helm 3.*
+RUN curl https://get.helm.sh/helm-$helm3_version-linux-amd64.tar.gz > ./helm.tar.gz    && \
+    tar -xvf ./helm.tar.gz                                                      && \ 
+    mv ./linux-amd64/helm /usr/local/bin
 
 # Installing Azure cli
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | \

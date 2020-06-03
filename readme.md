@@ -31,7 +31,17 @@ Use Volumes by running.
 ```
 docker run --rm -it -v $(pwd):/root/Downloads --name jbox docdoc2018/jumpbox:latest
 ```
+### Helm 2.14.0 commands
+```
+helm2 version --client
+Client: &version.Version{SemVer:"v2.14.0", GitCommit:"05811b84a3f93603dd6c2fcfe57944dfa7ab7fd0", GitTreeState:"clean"}
+```
 
+### Helm 3.2.1 commands
+```
+helm version --client
+version.BuildInfo{Version:"v3.2.1", GitCommit:"fe51cd1e31e6a202cba7dead9552a6d418ded79a", GitTreeState:"clean", GoVersion:"go1.13.10"}
+```
 
 # Pre-Installed utilities
  - curl 
