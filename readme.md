@@ -59,6 +59,7 @@ version.BuildInfo{Version:"v3.2.1", GitCommit:"fe51cd1e31e6a202cba7dead9552a6d41
 
    [Azure Cli]: <https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli?view=azure-cli-latest>
    [Helm 3.2.1]: <https://helm.sh/>
+   [Helm 2.14.0]: <https://helm.sh/>
    [Azure Powershell]: <https://docs.microsoft.com/en-us/powershell/azure/?view=azps-4.2.0>
    [Kubectl]: <https://kubernetes.io/docs/tasks/tools/install-kubectl/>
    [Docker]: <https://www.docker.com/>
