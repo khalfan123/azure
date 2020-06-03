@@ -68,7 +68,12 @@ The Azure CLI's default authentication method uses a web browser and access toke
  - zip 
  - unzip 
 
+## Uninstall Docker image
+If you decide to uninstall the Jump-Box, we're sorry to see you go. If you found a bug, we'd appreciate it if you file a [GitHub issue](https://github.com/khalfan123/jumpbox/issues).
 
+```
+docker rmi docdoc2018/jumpbox
+```
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
