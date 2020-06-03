@@ -10,6 +10,7 @@ The following Packages are available and configured in Jump-Box:
 
 * [Azure Cli] - Set of commands used to create and manage Azure resources.
 * [Helm 3.2.1] - Helm helps you manage Kubernetes applications.
+* [Helm 2.14.0] - Helm helps you manage Kubernetes applications.
 * [Azure Powershell] - Managing Azure resources directly from the PowerShell command line.
 * [Kubectl] - Command line tool for controlling Kubernetes clusters.
 * [Docker] - Package Software into Standardized Units for Development, Shipment and Deployment.
