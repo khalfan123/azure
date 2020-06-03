@@ -43,8 +43,24 @@ Client: &version.Version{SemVer:"v2.14.0", GitCommit:"05811b84a3f93603dd6c2fcfe5
 helm version --client
 version.BuildInfo{Version:"v3.2.1", GitCommit:"fe51cd1e31e6a202cba7dead9552a6d418ded79a", GitTreeState:"clean", GoVersion:"go1.13.10"}
 ```
+### Sign in with Azure CLI
+The Azure CLI's default authentication method uses a web browser and access token to sign in.
+ 1. Run the login command.
+   ```
+   az login
+   ```
+   If the CLI can open your default browser, it will do so and load an Azure sign-in page.
 
-# Pre-Installed utilities
+   Otherwise, open a browser page at (https://aka.ms/devicelogin) and enter the authorization code displayed in your terminal.
+
+ 2. Sign in with your account credentials in the browser.
+ 
+ OR 
+
+ 3. [Sign in with credentials on the command line](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli?view=azure-cli-latest#sign-in-with-credentials-on-the-command-line) 
+
+
+### Pre-Installed utilities
  - curl 
  - jq 
  - wget 
