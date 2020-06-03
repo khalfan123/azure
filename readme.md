@@ -32,7 +32,7 @@ docker run --rm -it --name jbox docdoc2018/jumpbox:latest
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Jum-Box have Pre-Installed Packages to work properly:
 
 * [Azure Cli] - Set of commands used to create and manage Azure resources.
 * [Helm] - Helm helps you manage Kubernetes applications.
