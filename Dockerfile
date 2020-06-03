@@ -20,8 +20,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     apt-transport-https \
     lsb-release gnupg  \
-    software-properties-common \
-    jq
+    software-properties-common
 
 # Installing Helm
 RUN mkdir -p ~/Downloads && curl -L https://raw.githubusercontent.com/khalfan123/jumpbox/master/helm_scripts/get-helm-3.sh | \
