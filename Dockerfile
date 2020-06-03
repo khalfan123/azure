@@ -4,7 +4,8 @@ MAINTAINER khalfan <khalfanawan2013@gmail.com>
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG helm_version=v3.2.1
+ARG helm2_version=v2.14.0
+ARG helm3_version=v3.2.1
 ARG kubectl_version=v1.18.0
 
 # Installing packages
@@ -22,9 +23,13 @@ RUN apt-get update && apt-get install -y \
     lsb-release gnupg  \
     software-properties-common
 
-# Installing Helm
+
+# Installing Helm 2.14.0
+RUN mkdir -p ~/Downloads && curl -L https://raw.githubusercontent.com/khalfan123/jumpbox/master/helm_scripts/get-helm-2.sh | \
+    bash -s -- --version $helm2_version --no-sudo
+# Installing Helm 3.2.1
 RUN mkdir -p ~/Downloads && curl -L https://raw.githubusercontent.com/khalfan123/jumpbox/master/helm_scripts/get-helm-3.sh | \
-    bash -s -- --version $helm_version --no-sudo
+    bash -s -- --version $helm3_version --no-sudo
 
 # Installing Azure cli
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | \

@@ -17,7 +17,7 @@
 # The install script is based off of the MIT-licensed script from glide,
 # the package manager for Go: https://github.com/Masterminds/glide.sh/blob/master/get
 
-PROJECT_NAME="helm"
+PROJECT_NAME="helm2"
 TILLER_NAME="tiller"
 
 : ${USE_SUDO:="true"}
