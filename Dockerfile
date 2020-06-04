@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ARG helm2_version=v2.14.0
 ARG helm3_version=v3.2.1
 ARG kubectl_version=v1.18.0
+ARG node_version=12.9.1
 
 # Installing packages
 RUN apt-get update && apt-get install -y \
@@ -21,7 +22,8 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     apt-transport-https \
     lsb-release gnupg  \
-    software-properties-common
+    software-properties- \
+    openssh-client
 
 # install helm 2.*
 RUN curl https://get.helm.sh/helm-$helm2_version-linux-amd64.tar.gz > ./helm.tar.gz    && \
@@ -66,6 +68,20 @@ RUN apt-get update                                                              
 RUN curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  && \
     chmod +x /usr/local/bin/docker-compose                                                                                                        && \
     ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+# nvm environment variables
+ENV NVM_DIR /usr/local/nvm
+
+# install nvm
+RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash \
+    && . $NVM_DIR/nvm.sh \
+    && nvm install $node_version \
+    && nvm alias default $node_version \
+    && nvm use default
+
+# add node and npm to path so the commands are available
+ENV NODE_PATH $NVM_DIR/v$node_version/lib/node_modules
+ENV PATH $NVM_DIR/versions/node/v$node_version/bin:$PATH
 
 CMD bash
 
