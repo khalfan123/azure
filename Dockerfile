@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     apt-transport-https \
     lsb-release gnupg  \
-    software-properties- \
+    software-properties-common \
     openssh-client
 
 # install helm 2.*
